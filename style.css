@@ -1,0 +1,144 @@
+/* General reset and body styles */
+html, body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Swiper container and slides */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Menu slide styling */
+.menu {
+  min-width: 100px;
+  width: 70%;
+  max-width: 320px;
+  background-color: #2c8dfb;
+  color: #fff;
+}
+
+/* Content slide styling */
+.content {
+  width: 100%;
+}
+
+/* Hamburger menu button */
+.menu-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #2c8dfb;
+}
+
+/* Individual bars in the menu button */
+.bar {
+  display: block;
+  width: 50px;
+  height: 5px;
+  margin: 10px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Hover effect for hamburger icon */
+.menu-button:hover .bar:nth-of-type(1) {
+  transform: translateY(1.5px) rotate(-4.5deg);
+}
+.menu-button:hover .bar:nth-of-type(2) {
+  opacity: 0.9;
+}
+.menu-button:hover .bar:nth-of-type(3) {
+  transform: translateY(-1.5px) rotate(4.5deg);
+}
+
+/* Cross (X) style when menu is open */
+.cross .bar:nth-of-type(1) {
+  transform: translateY(15px) rotate(-45deg);
+}
+.cross .bar:nth-of-type(2) {
+  opacity: 0;
+}
+.cross .bar:nth-of-type(3) {
+  transform: translateY(-15px) rotate(45deg);
+}
+
+/* Cross hover effect */
+.cross:hover .bar:nth-of-type(1) {
+  transform: translateY(13.5px) rotate(-40.5deg);
+}
+.cross:hover .bar:nth-of-type(2) {
+  opacity: 0.1;
+}
+.cross:hover .bar:nth-of-type(3) {
+  transform: translateY(-13.5px) rotate(40.5deg);
+}
+/* <----------------------------------------menu-list----------------------> */
+.menu-list {
+  padding: 20px;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+
+.menu-list ul {
+  list-style: none;         /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.menu-list li {
+  /* border: 1px solid red; */
+  font-size: 1.2rem;         /* Responsive font size */
+  margin-bottom: 20px;       /* Smaller gap for mobile */
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  font-size: 1em;            /* Inherits nicely from li */
+}
+
+.menu-list a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks for larger screens */
+@media (min-width: 600px) {
+  .menu-list li {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-list li {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+}
