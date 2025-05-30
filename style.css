@@ -11,30 +11,33 @@ body {
   color: #fff;
   overflow-x: hidden;
 }
-
+/* ----------------------------------------------as a navbar title------------------ */
 .content {
-  padding: 2rem;
+  padding: 1rem;
+  border: 1px solid red;
 }
 
-/* Hamburger Button */
+/* ------------------------------------------Hamburger Button------------------------------ */
 .menu-button {
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: 29px;
+  right: 25px;
   z-index: 1001;
   cursor: pointer;
+  border: 1px solid green;
 }
 
 .bar {
-  width: 30px;
+  width: 32px;
   height: 3px;
   margin: 6px 0;
   background: white;
   border-radius: 4px;
   transition: 0.3s;
+  /* border: 1px solid red; */
 }
 
-/* Cross effect */
+/* -------------------------------------------------Cross effect ---------------------------*/
 .menu-button.active .bar:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
 }
@@ -45,7 +48,7 @@ body {
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* Side Menu */
+/* --------------------------------------------Side Menu----------------------------------- */
 .side-menu {
   position: fixed;
   top: 0;
@@ -82,7 +85,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* Submenu */
+/* ---------------------------------------------------------Submenu------------------- */
 .submenu {
   display: none;
   margin-top: 0.5rem;
