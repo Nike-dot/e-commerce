@@ -1,58 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>E-commerce</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-
-  <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <!-- Link to external stylesheet -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slide-in Menu</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Swiper container -->
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide menu">
-          <div class="menu-list">
-  <ul>
-    <li><a href="#">Home</a></li>
-    
-    <li class="has-submenu">
-      <a href="#">Shop</a>
-      <ul class="submenu">
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Kids</a></li>
-      </ul>
-    </li>
-    
-    <li><a href="#">My Account</a></li>
-    <li><a href="#">Cart</a></li>
-    <li><a href="#">Checkout</a></li>
-    <li><a href="#">Order Tracking</a></li>
-    <li><a href="#">Customer Service</a></li>
-    <li><a href="#">Contact Us</a></li>
-  </ul>
-</div>
 
-      </div>
-      <div class="swiper-slide ">
-        <!-- Menu toggle button -->
-        <div class="menu-button">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-        <div class="content">Content slide</div>
-      </div>
-    </div>
+  <!-- Hamburger Button -->
+  <div class="menu-button" id="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
   </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- Link to external JS file -->
+  <!-- Slide-in Menu -->
+  <nav class="side-menu" id="side-menu">
+    <ul class="menu-list">
+      <li><a href="#">Home</a></li>
+      <li class="has-submenu">
+        <a href="#">Shop</a>
+        <ul class="submenu">
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Kids</a></li>
+        </ul>
+      </li>
+      <li><a href="#">My Account</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">Checkout</a></li>
+      <li><a href="#">Order Tracking</a></li>
+      <li><a href="#">Customer Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="content">
+    <h1>Main Content Area</h1>
+    <p>This is your main page content.</p>
+  </main>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,177 +1,98 @@
-/* General reset and body styles */
-html, body {
-  position: relative;
-  height: 100%;
+/* Basic Reset */
+* {
   margin: 0;
   padding: 0;
-  background: #000;
-  color: #fff;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-}
-
-/* Swiper container and slides */
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-
-/* Menu slide styling */
-.menu {
-  min-width: 100px;
-  width: 70%;
-  max-width: 320px;
-  background-color: #45c59f;
-  color: #fff;
-}
-
-/* Content slide styling */
-.content {
-  width: 100%;
-}
-
-/* Hamburger menu button */
-.menu-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  /* background-color: #2c8dfb; */
-  /* border: 1px solid red; */
-}
-
-/* Individual bars in the menu button */
-.bar {
-  display: block;
-  width: 30px;
-  height: 3px;
-  margin: 10px 5px;
-  background-color:white;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-/* Hover effect for hamburger icon */
-.menu-button:hover .bar:nth-of-type(1) {
-  transform: translateY(1.5px) rotate(-4.5deg);
-}
-.menu-button:hover .bar:nth-of-type(2) {
-  opacity: 0.9;
-}
-.menu-button:hover .bar:nth-of-type(3) {
-  transform: translateY(-1.5px) rotate(4.5deg);
-}
-
-/* Cross (X) style when menu is open */
-.cross .bar:nth-of-type(1) {
-  transform: translateY(15px) rotate(-45deg);
-}
-.cross .bar:nth-of-type(2) {
-  opacity: 0;
-}
-.cross .bar:nth-of-type(3) {
-  transform: translateY(-15px) rotate(45deg);
-}
-
-/* Cross hover effect */
-.cross:hover .bar:nth-of-type(1) {
-  transform: translateY(13.5px) rotate(-40.5deg);
-}
-.cross:hover .bar:nth-of-type(2) {
-  opacity: 0.1;
-}
-.cross:hover .bar:nth-of-type(3) {
-  transform: translateY(-13.5px) rotate(40.5deg);
-}
-/* <----------------------------------------menu-list----------------------> */
-.menu-list {
-  padding: 20px;
-  width: 100%;
-  max-width: 320px;
   box-sizing: border-box;
 }
 
-.menu-list ul {
+body {
+  font-family: Arial, sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.content {
+  padding: 2rem;
+}
+
+/* Hamburger Button */
+.menu-button {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  margin: 6px 0;
+  background: white;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+/* Cross effect */
+.menu-button.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.menu-button.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-button.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Side Menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 320px;
+  height: 100%;
+  background-color: #45c59f;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 2rem 1rem;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.menu-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
 }
 
 .menu-list li {
-  position: relative; /* Needed for submenu positioning */
+  margin-bottom: 1rem;
   font-size: 1.2rem;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-radius: 6px;
 }
 
 .menu-list a {
-  text-decoration: none;
   color: white;
-  display: block;
-  width: 100%;
-  font-size: 1em;
+  text-decoration: none;
 }
 
-.menu-list a:hover {
-  text-decoration: underline;
-}
-
-/* Submenu hidden by default */
-.submenu {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 100%;
-  background-color: #333;
-  border: 1px solid #222;
-  width: 200px;
-  z-index: 10;
-  padding: 0;
-}
-
-.submenu li {
-  margin: 0;
-  border: none;
-  padding: 10px;
-}
-
-.submenu li a {
-  font-size: 1rem;
-}
-
-/* Hover to reveal submenu */
-.has-submenu:hover > .submenu {
-  display: block;
-}
-
-/* Optional: submenu item hover background */
-.submenu li a:hover {
-  background-color: #444;
-}
-
-/* Optional: dropdown arrow */
 .has-submenu > a::after {
   content: " ▼";
   font-size: 0.8rem;
 }
 
-/* Responsive: medium screens */
-@media (min-width: 600px) {
-  .menu-list li {
-    font-size: 1.3rem;
-    margin-bottom: 25px;
-  }
+/* Submenu */
+.submenu {
+  display: none;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
 }
 
-/* Responsive: large screens */
-@media (min-width: 1024px) {
-  .menu-list li {
-    font-size: 1.4rem;
-    margin-bottom: 30px;
-  }
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  font-size: 1rem;
 }
