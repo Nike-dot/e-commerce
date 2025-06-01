@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>E-commerce</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
-  <!------------------------------------------ Hamburger Button -------------------------------->
+  <!-- Hamburger Button -->
   <div class="menu-button" id="menu-toggle">
     <div class="bar"></div>
     <div class="bar"></div>
     <div class="bar"></div>
   </div>
 
-  <!------------------------------------------ Slide-in Menu -------------------------------------->
+  <!-- Slide-in Menu -->
   <nav class="side-menu" id="side-menu">
     <ul class="menu-list">
       <li><a href="#">Home</a></li>
@@ -36,36 +39,40 @@
     </ul>
   </nav>
 
-  <!---------------------------------------- Page Content --------------------------------------->
+  <!-- Page Header -->
   <main class="content">
     <h1>Logo</h1>
   </main>
-<!-- ---------------------- Banner Section with 3D Carousel ------------------------ -->
-<section class="banner">
-  <div class="slider-container">
-    <!-- Swiper Carousel -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="a1.jpg" alt="slider1" />
-        </div>
-        <div class="swiper-slide">
-          <img src="a2.jpg" alt="slider2" />
-        </div>
-        <div class="swiper-slide">
-          <img src="a3.jpg" alt="slider3" />
-        </div>
-        <div class="swiper-slide">
-          <img src="a4.jpg" alt="slider4" />
-        </div>
-        <div class="swiper-slide">
-          <img src="a5.jpg" alt="slider5" />
+
+  <!-- Banner Section with Swiper Carousel -->
+  <section class="banner">
+    <div class="slider-container">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="a1.jpg" alt="slider1" />
+          </div>
+          <div class="swiper-slide">
+            <img src="a2.jpg" alt="slider2" />
+          </div>
+          <div class="swiper-slide">
+            <img src="a3.jpg" alt="slider3" />
+          </div>
+          <div class="swiper-slide">
+            <img src="a4.jpg" alt="slider4" />
+          </div>
+          <div class="swiper-slide">
+            <img src="a5.jpg" alt="slider5" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Local JS -->
   <script src="script.js"></script>
 </body>
 </html>
