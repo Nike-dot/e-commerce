@@ -135,13 +135,7 @@ body {
   border-radius: 20px;
 }
 
-/* ---------------------------------------------first-part---------- */
 
-.first-part{
-  height: 100vh;
-  width: auto;
-  border:  1px solid red;
-}
 /* -------------------------------------menu-section------------------------------ */
 /* Responsive adjustments */
 @media (max-width: 600px) {
@@ -161,4 +155,16 @@ body {
   body {
     padding-top: 70px;
   }
+}
+
+/* ---------------------------------------------first-part-------------------------------- */
+
+.first-part{
+  height: 90vh;
+  width: auto;
+  /* border:  1px solid red; */
+  background-image: url(banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
