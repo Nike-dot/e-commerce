@@ -8,6 +8,7 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   padding-top: 90px;
+  background-color: black;
 }
 
 /* ----------------------------------------------------navbar---------------------------- */
@@ -140,7 +141,7 @@ body {
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .side-menu {
-    width: 90%;
+    width: 65%;
     max-width: none;
     padding: 1.5rem 0.5rem;
   }
@@ -241,19 +242,19 @@ body {
 
 @media (max-width: 480px) {
   .part-content > p:nth-child(1) {
-    font-size: 30px;
+    font-size: 3rem;
     margin-top: 8rem;
-    color: white;
+    /* color: white; */
   }
   .part-content > p:nth-child(2) {
     font-size: 20px;
     margin-top: 1rem;
-    color: white;
+    /* color: white; */
   }
   .part-content > p:nth-child(3) {
     font-size: 17px;
-    margin-top: 1rem;
-    color: white;
+    margin-bottom: 1rem;
+    /* color: white; */
   }
   .btn{
   width: 9rem;
