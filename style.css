@@ -285,6 +285,7 @@ body {
 
 .second-part a{
   text-decoration: none;
+  color: black;
 }
 
 .card {
@@ -312,6 +313,7 @@ body {
   /* border: 1px solid yellow; */
   border-radius: 50%;
   margin-top: 10px;
+  
 }
 
 .card-content {
@@ -353,5 +355,5 @@ body {
 /* ---------------------------------------third-part--------------- */
 .third-part{
   height: 50vh;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
