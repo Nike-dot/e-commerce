@@ -267,7 +267,11 @@ body {
 }
 }
 
-
+.second-part-heading{
+  /* border: 1px solid red; */
+   text-align: center;
+   font-size: 50px;
+}
 /* --------------------------------------------second-part--------------------------------- */
 
 .second-part {
@@ -279,10 +283,14 @@ body {
   padding: 30px 10px;
 }
 
+.second-part a{
+  text-decoration: none;
+}
+
 .card {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   max-width: 300px;
   width: 100%;
@@ -316,13 +324,6 @@ body {
   text-align: center;
 }
 
-.card-content p {
-  color: #555;
-  font-size: 0.95rem;
-  text-align: center;
-}
-
-
 /* Responsive styles for second-part */
 @media (max-width: 900px) {
   .second-part {
@@ -345,6 +346,7 @@ body {
     max-width: 95%;
     width: 100%;
     margin: 0 0 15px 0;
+    
   }
 }
 
