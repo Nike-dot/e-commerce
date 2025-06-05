@@ -271,6 +271,7 @@ body {
   /* border: 1px solid red; */
    text-align: center;
    font-size: 50px;
+   margin-top: 10px;
 }
 /* --------------------------------------------second-part--------------------------------- */
 
@@ -303,7 +304,7 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-7px);
 }
 
 .card img {
