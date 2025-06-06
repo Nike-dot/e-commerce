@@ -27,27 +27,52 @@ menuButton.addEventListener('click', () => {
       disableOnInteraction: false,
     },
     breakpoints: {
-      320: { slidesPerView: 1 },
+      320: { slidesPerView: 1 }, 
       768: { slidesPerView: 2 },
       1024: { slidesPerView: 3 }
     }
   });
 
 // ---------------------------second-part-js------------------------->//
-const track = document.getElementById('sliderTrack');
+const track = document.getElementById("sliderTrack");
 let scrollAmount = 0;
+let scrollSpeed = 2.5; // Faster
+let isHovering = false;
+
+function applyCoverflowEffect() {
+  const slides = document.querySelectorAll(".slide");
+  const trackRect = track.getBoundingClientRect();
+
+  slides.forEach(slide => {
+    const slideRect = slide.getBoundingClientRect();
+    const centerDiff = (slideRect.left + slideRect.width / 2) - (trackRect.left + trackRect.width / 2);
+    const offset = centerDiff / slideRect.width;
+
+    const rotateY = offset * 45;
+    const scale = 1 - Math.min(Math.abs(offset) * 0.4, 0.4);
+
+    slide.style.transform = `perspective(1000px) rotateY(${rotateY}deg) scale(${scale})`;
+    slide.style.zIndex = 100 - Math.round(Math.abs(offset) * 100);
+  });
+}
 
 function autoScroll() {
-  scrollAmount += 1;
+  if (!isHovering) {
+    scrollAmount += scrollSpeed;
 
-  // When we reach halfway (end of first set), reset to start
-  if (scrollAmount >= track.scrollWidth / 2) {
-    scrollAmount = 0;
-    track.scrollLeft = 0; // Reset instantly to beginning
+    if (scrollAmount >= track.scrollWidth / 2) {
+      scrollAmount = 0;
+      track.scrollLeft = 0;
+    }
+
+    track.scrollLeft = scrollAmount;
+    applyCoverflowEffect();
   }
 
-  track.scrollTo({ left: scrollAmount, behavior: 'auto' }); // 'auto' for smooth loop
   requestAnimationFrame(autoScroll);
 }
+
+track.addEventListener("mouseenter", () => (isHovering = true));
+track.addEventListener("mouseleave", () => (isHovering = false));
 
 autoScroll();
