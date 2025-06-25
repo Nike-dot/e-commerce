@@ -363,5 +363,25 @@ body {
 /* ---------------------------------------third-part--------------- */
 .third-part{
   height: 50vh;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
+
+    .slider-track2 {
+      display: flex;
+      overflow-x: auto;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+      padding: 10px;
+      scroll-behavior: smooth;
+      /* border: 1px solid red; */
+      margin-bottom: 20px;
+    }
+
+    .slider-track2::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slider-track2 {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }

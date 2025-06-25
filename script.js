@@ -76,3 +76,5 @@ track.addEventListener("mouseenter", () => (isHovering = true));
 track.addEventListener("mouseleave", () => (isHovering = false));
 
 autoScroll();
+
+// --------------------------------third-part-js------------------------->//
