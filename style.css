@@ -278,6 +278,8 @@ body {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 20px;
+      /* border: 4px solid blue; */
+
     }
 
     .slider-track {
@@ -287,6 +289,8 @@ body {
       scroll-snap-type: x mandatory;
       padding: 10px;
       scroll-behavior: smooth;
+      /* border: 1px solid red; */
+      margin-bottom: 20px;
     }
 
     .slider-track::-webkit-scrollbar {
