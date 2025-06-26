@@ -36,7 +36,7 @@ menuButton.addEventListener('click', () => {
 // ---------------------------second-part-js------------------------->//
 const track = document.getElementById("sliderTrack");
 let scrollAmount = 0;
-let scrollSpeed = 2.5; // Faster
+let scrollSpeed = 1.5; // Faster
 let isHovering = false;
 
 function applyCoverflowEffect() {
@@ -80,7 +80,7 @@ autoScroll();
 // -----------third-part-js (duplicate slider logic)------------------->//
 const track2 = document.getElementById("sliderTrack2");
 let scrollAmount2 = 0;
-let scrollSpeed2 = 2.5; // Same speed as first slider
+let scrollSpeed2 = 1.5; // Same speed as first slider
 let isHovering2 = false;
 
 function applyCoverflowEffect2() {
