@@ -77,4 +77,46 @@ track.addEventListener("mouseleave", () => (isHovering = false));
 
 autoScroll();
 
-// --------------------------------third-part-js------------------------->//
+// -----------third-part-js (duplicate slider logic)------------------->//
+const track2 = document.getElementById("sliderTrack2");
+let scrollAmount2 = 0;
+let scrollSpeed2 = 2.5; // Same speed as first slider
+let isHovering2 = false;
+
+function applyCoverflowEffect2() {
+  const slides2 = document.querySelectorAll(".slide2");
+  const trackRect2 = track2.getBoundingClientRect();
+
+  slides2.forEach(slide2 => {
+    const slideRect2 = slide2.getBoundingClientRect();
+    const centerDiff2 = (slideRect2.left + slideRect2.width / 2) - (trackRect2.left + trackRect2.width / 2);
+    const offset2 = centerDiff2 / slideRect2.width;
+
+    const rotateY2 = offset2 * 45;
+    const scale2 = 1 - Math.min(Math.abs(offset2) * 0.4, 0.4);
+
+    slide2.style.transform = `perspective(1000px) rotateY(${rotateY2}deg) scale(${scale2})`;
+    slide2.style.zIndex = 100 - Math.round(Math.abs(offset2) * 100);
+  });
+}
+
+function autoScroll2() {
+  if (!isHovering2) {
+    scrollAmount2 += scrollSpeed2;
+
+    if (scrollAmount2 >= track2.scrollWidth / 2) {
+      scrollAmount2 = 0;
+      track2.scrollLeft = 0;
+    }
+
+    track2.scrollLeft = scrollAmount2;
+    applyCoverflowEffect2();
+  }
+
+  requestAnimationFrame(autoScroll2);
+}
+
+track2.addEventListener("mouseenter", () => (isHovering2 = true));
+track2.addEventListener("mouseleave", () => (isHovering2 = false));
+
+autoScroll2();
