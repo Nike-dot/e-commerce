@@ -20,8 +20,8 @@ body {
   z-index: 1001;
   height: 90px;
   padding: 1rem;
-  background-color: blueviolet;
-  border-radius: 0 0 15px 15px;
+  background-color: #3F51B5 ;
+  /* border-radius: 0 0 15px 15px; */
 }
 
 /* ---------------------------------------------Hamburger Menu-------------------------- */
