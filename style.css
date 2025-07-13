@@ -211,19 +211,6 @@ body {
   flex-direction: column;
   padding: 10px 45px 10px 45px ;
 }
-.btn{
-  width: 11rem;
-  padding: 25px;
-  border-radius: 15px;
-  background-color: #45c59f;
-  font-size: 1rem;
-  font-weight: 900;
-  margin-top: 10rem;
-}
-.btn a{
-  text-decoration: none;
-  color: white;
-}
 .part-content > p:nth-child(1) {
   font-size: 50px;
   font-weight: 900;
@@ -288,15 +275,6 @@ body {
     margin-bottom: 1rem;
     /* color: white; */
   }
-  .btn{
-  width: 9rem;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: #45c59f;
-  font-size: 19px;
-  font-weight: 900;
-  margin-top: 7rem;
-}
 }
 
 .second-part-heading{
@@ -417,3 +395,312 @@ body {
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+/* ---------------------------------------------------------fourth-part------------------------------------ */
+.fourth-part{
+  height: 100vh;
+  width: 100vw;
+  border: 1px solid red;
+  padding: 30px;
+}
+/* ✅ Updated CSS with New Class Names */
+
+.theme-switch-card {
+  width: 15em;
+  height: 10em;
+  background-color: #252525;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.card-flex {
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: .2s ease-in-out;
+}
+
+.card-flex:hover .fullscreen-toggle {
+  scale: 1.2;
+}
+
+.card-flex:hover .fullscreen-icon {
+  fill: white;
+}
+
+.fullscreen-toggle {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 5px;
+  background-color: #727890;
+  margin: 1em;
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s ease-in-out;
+  box-shadow: 2px 2px 6px rgba(0,0,0,.4);
+}
+
+.fullscreen-icon {
+  width: 15px;
+  height: 15px;
+  fill: rgb(177, 176, 176);
+  transition: .2s ease-in-out;
+}
+
+.card-background {
+  position: absolute;
+  width: 15em;
+  height: 13em;
+  background-color: rgba(30, 31, 38, 0.575);
+  border-radius: 7px;
+  margin-top: -5em;
+  margin-left: 0.7em;
+  transition: .2s ease-in-out;
+  z-index: -1;
+}
+
+.theme-switch-container:hover .card-background {
+  margin-top: -6.25em;
+  margin-left: 0em;
+  scale: 1.1;
+  height: 15.25em;
+  cursor: pointer;
+}
+
+.theme-switch-container:hover .card-flex {
+  opacity: 1;
+  cursor: pointer;
+  margin-right: 0.5em;
+}
+
+.theme-meta {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.theme-img {
+  width: 2.25em;
+  height: 2.25em;
+  background-color: #252525;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.theme-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0.5em;
+  font-family: Montserrat;
+  color: white;
+}
+
+.theme-title {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.theme-author {
+  font-size: 0.7em;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 0.5em;
+  transition: .2s ease-in-out;
+}
+
+.btn-likes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .2s ease-in-out;
+}
+
+.like-count {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.icon-like {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.btn-likes:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.btn-comments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .24s ease-in-out;
+}
+
+.comment-count {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.icon-comment {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.btn-comments:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.btn-views {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3em;
+  height: 1.4em;
+  border-radius: 4px;
+  margin-top: -0.5em;
+  opacity: 0;
+  background-color: #444857;
+  transition: .28s ease-in-out;
+}
+
+.view-count {
+  font-family: Montserrat;
+  font-size: 0.8em;
+  margin-left: 0.25em;
+  color: white;
+}
+
+.icon-view {
+  width: 12px;
+  height: 12px;
+  fill: white;
+}
+
+.btn-views:hover {
+  background-color: #5A5F73;
+  cursor: pointer;
+}
+
+.theme-switch-container:hover .btn-likes {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+.theme-switch-container:hover .btn-comments {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+.theme-switch-container:hover .btn-views {
+  margin-top: 0.5em;
+  opacity: 1;
+}
+
+.card-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch {
+  font-size: 13px;
+  position: relative;
+  display: inline-block;
+  width: 1.2em;
+  height: 3.3em;
+}
+
+.toggle-switch .toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 5px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: .5em;
+  width: 2.4em;
+  border-radius: 5px;
+  left: -0.6em;
+  top: 0.2em;
+  background-color: white;
+  box-shadow: 0 6px 7px rgba(0,0,0,0.3);
+  transition: .4s;
+}
+
+.toggle-slider:before, .toggle-slider:after {
+  content: "";
+  display: block;
+}
+
+.toggle-slider:after {
+  background: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.15) 0) 0 50% / 50% 100%,
+  repeating-linear-gradient(90deg,rgb(255, 255, 255) 0,rgb(255, 255, 255),rgb(255, 255, 255) 20%,rgb(255, 255, 255) 20%,rgb(255, 255, 255) 40%) 0 50% / 50% 100%,
+  radial-gradient(circle at 50% 50%,rgb(255, 255, 255) 25%, transparent 26%);
+  background-repeat: no-repeat;
+  border: 0.25em solid transparent;
+  border-left: 0.4em solid #ffffff;
+  border-right: 0 solid transparent;
+  transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
+  transform: translateX(-22.5%) rotate(90deg);
+  transform-origin: 25% 50%;
+  position: relative;
+  top: 0.5em;
+  left: 0.55em;
+  width: 2em;
+  height: 1em;
+  box-sizing: border-box;
+}
+
+.toggle-checkbox:checked + .toggle-slider {
+  background-color: limegreen;
+}
+
+.toggle-checkbox:focus + .toggle-slider {
+  box-shadow: 0 0 1px limegreen;
+}
+
+.toggle-checkbox:checked + .toggle-slider:before {
+  transform: translateY(2.3em);
+}
+
+.toggle-checkbox:checked + .toggle-slider:after {
+  transform: rotateZ(90deg) rotateY(180deg) translateY(0.45em) translateX(-1.4em);
+}
