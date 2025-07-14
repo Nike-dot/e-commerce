@@ -62,7 +62,7 @@ body {
   width: 70%;
   max-width: 320px;
   height: calc(100% - 90px); /* Adjust height for navbar */
-  background-color: #45c59f;
+  background-color: #3F51B5;
   transition: right 0.3s ease;
   z-index: 1000;
   padding: 2rem 1rem;
