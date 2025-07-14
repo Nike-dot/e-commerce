@@ -396,7 +396,17 @@ body {
       scrollbar-width: none;
     }
 /* ---------------------------------------------------------fourth-part------------------------------------ */
-/* Grid Layout */
+.fourth{
+  /* border: 1px solid red; */
+  height: auto;
+  text-align: center;
+  font-size: 50px ;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+
 .product-grid {
   display: flex;
   flex-wrap: wrap;
@@ -424,9 +434,12 @@ body {
 }
 
 .product-image img {
-  width: 100%;
-  height: auto;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
   display: block;
+  margin: 0 auto;
 }
 
 .product-info {
@@ -476,5 +489,10 @@ body {
 @media (max-width: 600px) {
   .product-card {
     flex: 1 1 calc(50% - 20px);
+  }
+  .product-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
   }
 }
