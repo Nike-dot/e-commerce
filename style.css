@@ -499,79 +499,111 @@ body {
 
 /* <!-- ------------------------------------fifth-part----------------------- --> */
 .fifth-part {
-  border:  5px solid red;
-  padding: 50px ;
+  border: 5px solid red;
+  padding: 50px;
 }
 
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: auto;
-      gap: 20px;
-    }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 20px;
+}
 
-    .grid-item {
-      position: relative;
-      background-color: #fff;
-      border-radius: 15px;
-      overflow: hidden;
-      padding: 20px;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+.grid-item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    .item1 { background: #ff4c4c; }
-    .item2 { background: #e0ffee; color: #222; }
-    .item3 {
-      background: #00db76;
-      grid-row: span 2; /* make it tall like item4 */
-    }
-    .item4 {
-      background: #0b2c45;
-      grid-column: span 2; /* wide */
-    }
+.item1 { background: #ff4c4c; }
+.item2 { background: #e0ffee; color: #222; }
+.item3 {
+  background: #00db76;
+  grid-row: span 2; /* make it tall like item4 */
+}
+.item4 {
+  background: #0b2c45;
+  grid-column: span 2; /* wide */
+}
 
-    .grid-item h2 {
-      margin: 10px 0 5px;
-      font-size: 24px;
-    }
+.grid-item h2 {
+  margin: 10px 0 5px;
+  font-size: 24px;
+}
 
-    .grid-item p {
-      font-size: 16px;
-    }
+.grid-item p {
+  font-size: 16px;
+}
 
-    .product-img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 10px;
-    }
+.product-img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
 
-    .btn {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #111;
-      color: #fff;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: bold;
-      align-self: start;
-    }
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: start;
+}
 
-    .btn:hover {
-      background-color: #333;
-    }
+.btn:hover {
+  background-color: #333;
+}
 
-    @media (max-width: 768px) {
-      .grid-container {
-        grid-template-columns: 1fr;
-      }
+/* Responsive for mobile - keep as is */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
 
-      .item3,
-      .item4 {
-        grid-column: span 1;
-        grid-row: span 1;
-      }
-    }
+  .item3,
+  .item4 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* ----------------------- Desktop specific adjustment to reduce layout size -------------------- */
+@media (min-width: 1024px) {
+  .fifth-part {
+    padding: 30px 100px; /* reduce padding horizontally */
+  }
+
+  .grid-container {
+    max-width: 1000px;
+    margin: 0 auto; /* center horizontally */
+    gap: 16px; /* slightly less gap */
+  }
+
+  .grid-item {
+    padding: 15px; /* less padding inside items */
+  }
+
+  .grid-item h2 {
+    font-size: 20px; /* slightly smaller heading */
+  }
+
+  .grid-item p {
+    font-size: 14px; /* smaller paragraph */
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
