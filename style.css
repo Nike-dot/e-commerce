@@ -607,3 +607,75 @@ body {
   }
 }
 
+/* ------------------------------------------footer---------------------------------------- */
+.site-footer {
+  background: url('layered-steps-haikei.png') no-repeat center;
+  background-size: cover;
+  color: white;
+  padding: 60px 20px 30px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #dddddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons a {
+  margin-right: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ff66ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #cccccc;
+}
+.footer-content {
+  backdrop-filter: blur(8px);
+  background-color: rgba(212, 130, 236, 0.4); /* optional for darker glass */
+  padding: 40px;
+  border-radius: 10px;
+}
+.site-footer {
+  background: 
+    linear-gradient(rgba(10, 10, 9, 0.7), rgba(0,0,0,0.7)),
+    url('layered-steps-haikei.png') no-repeat center;
+  background-size: cover;
+  color: white;
+  padding: 60px 20px 30px;
+}
